@@ -28,7 +28,13 @@ public class GameEnding : MonoBehaviour
 
     public void CaughtPlayer ()
     {
-        m_IsPlayerCaught = true;
+        if (player.GetComponent<PlayerMovement>().shield)
+        {
+            player.GetComponent<PlayerMovement>().ShieldBreak();
+        } else
+        {
+            m_IsPlayerCaught = true;
+        }
     }
 
     void Update ()

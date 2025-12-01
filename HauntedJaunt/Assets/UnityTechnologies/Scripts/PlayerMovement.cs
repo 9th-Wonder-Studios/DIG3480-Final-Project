@@ -9,8 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public float turnSpeed = 20f;
     Animator m_Animator;
     Rigidbody m_Rigidbody;
-    private AudioSource m_AudioSource; 
-    
+    private AudioSource m_AudioSource;
+    private float boost = 1;
+    public bool shield = false;
+    public GameObject shieldAsset;
+
     void Start()
     {
         m_Animator = GetComponent<Animator>();
@@ -43,12 +46,45 @@ public class PlayerMovement : MonoBehaviour
             m_AudioSource.Stop();
         }
 
-        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            boost = 2;
+        } else
+        {
+            boost = 1;
+        }
+
+        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement * boost, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation(desiredForward);
     }
     void OnAnimatorMove()
     {
-        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);
+        m_Rigidbody.MovePosition(m_Rigidbody.position + (m_Movement * boost) * m_Animator.deltaPosition.magnitude);
         m_Rigidbody.MoveRotation(m_Rotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("touch");
+        if (other.gameObject.tag != "Shield") return;
+
+
+        Debug.Log("SHIELD");
+        shield = true;
+        shieldAsset.SetActive(true);
+        Destroy(other.gameObject);
+    }
+
+    public void ShieldBreak()
+    {
+        shieldAsset.GetComponent<AudioSource>().Play();
+        StartCoroutine(ShieldBuffer());
+    }
+
+    IEnumerator ShieldBuffer()
+    {
+        yield return new WaitForSeconds(2f);
+        shield = false;
+        shieldAsset.SetActive(false);
     }
 }
