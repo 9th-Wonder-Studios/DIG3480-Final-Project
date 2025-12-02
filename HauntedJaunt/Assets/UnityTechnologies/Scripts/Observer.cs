@@ -37,11 +37,11 @@ public class Observer : MonoBehaviour
             {
                 if (raycastHit.collider.transform == player)
                 {
-                    gameEnding.CaughtPlayer();
                     if (player.GetComponent<PlayerMovement>().shield)
                     {
                         Destroy(transform.parent.gameObject);
                     }
+                    gameEnding.CaughtPlayer();
                 }
                     
             }
