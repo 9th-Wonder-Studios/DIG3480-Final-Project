@@ -13,15 +13,15 @@ https://youtu.be/Ebr9gwnCm2U
 <!-- EMMA'S SECTION -->
 # Emma Lundquist
 ### ***1. What are the modifications you made to the game?***
-[insert response here]
+I did parts 4-6 on the tutorial. I made the camrea follow John, created the post-processing effects, and started on the Gargoyle Prefab.
 <br><br>
 
 ### ***2. What's the biggest challenge you have so far?***
-[insert response here]
+Post-processing. I couldn't get the effects to display in the game correctly. I had to read a couple of Reddit forums and the discord to figure out what was happening. I ended up using a different way than the John Lemon tutorial, and just bypassed the Post-processing volume node.  
 <br><br>
 
 ### ***3. Will you continue working on this assignment? If yes, what might be some changes you will add later?***
-[insert response here]
+I kinda want to make him look like John Lennon cause I think it would be funny. Otherwise probably not.
 <br><br><br>
 
 
