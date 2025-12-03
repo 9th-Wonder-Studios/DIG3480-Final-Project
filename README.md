@@ -43,15 +43,15 @@ I plan to recreate the project on my own time! I mostly want to follow the tutor
 <!-- SUMMER'S SECTION -->
 # Summer Smith
 ### ***1. What are the modifications you made to the game?***
-[insert response here]
+I did parts 1-3 of the tutorial. I imported all of the assets, placed John Lemon and the level into the scene, made the first script for the player to control John, made the animations work on John, and baked the Navmesh.
 <br><br>
 
 ### ***2. What's the biggest challenge you have so far?***
-[insert response here]
+The biggest challenge for me was troubleshooting the gravity for John. I ended up having to make the project's gravity positive so he wouldn't fly upwards off the screen.
 <br><br>
 
 ### ***3. Will you continue working on this assignment? If yes, what might be some changes you will add later?***
-[insert response here]
+I would like to do the rest of the tutorial in order to better understand how all of the components worked in the entire project!
 <br><br><br>
 
 
