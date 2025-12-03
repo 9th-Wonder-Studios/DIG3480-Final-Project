@@ -1,4 +1,4 @@
-# PLaythrough Video
+# Playthrough Video
 https://youtu.be/Ebr9gwnCm2U
 <br><br>
 
@@ -58,13 +58,13 @@ I would like to do the rest of the tutorial in order to better understand how al
 <!-- ASHER'S SECTION -->
 # Asher Moffitt
 ### ***1. What are the modifications you made to the game?***
-[insert response here]
+I started by adding a simple sprint mechanic to the game that allows the player to move at 2x speed when the shift key is pressed. This added a bit of skill to the game and overall made the game more fun. I also added a shield powerup to the game that allows the player to destroy a ghost instead of being caught.
 <br><br>
 
 ### ***2. What's the biggest challenge you have so far?***
-[insert response here]
+The biggest challenge I faced was with adding the shield. I had some problems getting the shield to work at first but I was able to get some help from my team to fix it.
 <br><br>
 
 ### ***3. Will you continue working on this assignment? If yes, what might be some changes you will add later?***
-[insert response here]
+I have a lot of game dev projects in the works already that require my attention but I learned some important stuff through completing this project so im happy about the work I contributed.
 <br><br><br>
